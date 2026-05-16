@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(128, 128, 128, 0.4);
+            width: 100vw;
+            height: 100vh;
+            font-size: 12pt;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            width: 30%;
+            height: auto;
+            min-height: 400px;
+            background-color: whitesmoke;
+            border: solid 1px rgba(128, 128, 128, 0.5);
+            border-radius: 10px;
+            box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.4);
+            padding: 10px;
+        }
+
+        #login {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 10px;
+        }
+
+        .col {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .col input {
+            font-size: 14pt;
+            padding: 6px 4px;
+            border-radius: 5px;
+            border: solid 1px rgba(128, 128, 128, 0.5);
+        }
+
+        .row {
+            width: 100%;
+            height: auto;
+            display: flex;
+            gap: 6px;
+        }
+
+        .row input {
+            width: 80%;
+            font-size: 14pt;
+            padding: 6px 4px;
+            border-radius: 5px;
+            border: solid 1px rgba(128, 128, 128, 0.5);
+        }
+
+        .row label {
+            display: block;
+            width: 20%;
+        }
+
+        #submit {
+            padding: 8px 0;
+            background-color: rgb(3, 3, 77);
+            color: white;
+            outline: none;
+            border: solid 1px rgba(128, 128, 128, 0.5);
+            border-radius: 5px;
+        }
+
+        #forgot-password {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h3>Login into your account!</h3>
+        <form action="#" id="login">
+            <div class="col">
+                <label for="username">Email</label>
+                <input type="email" name="username" id="username" placeholder="mail@yourmail.com" />
+            </div>
+            <div class="col">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password" />
+            </div>
+            <div id="forgot-password">
+                <a href="#forgot-password">Forgot Password</a>
+            </div>
+            <input type="submit" value="Login" id="submit" />
+            <div>
+                <span>Don't have an account? </span>
+                <a href="#create-account">Create Account</a>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
