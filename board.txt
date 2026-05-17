@@ -4,3 +4,9 @@ Mastering Layout
     ii. Spacing (Vertical spacing and Horizontal Spacing)
     iii. Items Control (Size)
 2. Grid Layout
+    1. Grid container
+    2. Grid items
+    3. Grid lines
+    4. Grid track
+    5. Grid cell
+    6. Grid area
