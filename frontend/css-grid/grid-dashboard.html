@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implement Dashboard using Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #eee;
+            color: #000;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 12pt;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+            grid-template-columns: 4fr 1fr 1fr;
+            grid-template-rows: 1fr 2fr 5fr 1fr;
+            grid-template-areas:
+                "header header aside"
+                "hero hero aside"
+                "charts distribution aside"
+                "footer footer aside";
+        }
+
+        .card {
+            border: solid 1px rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            background-color: white;
+        }
+
+        .header {
+            border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            background-color: white;
+            grid-area: header;
+        }
+
+        .hero {
+            width: 100%;
+            grid-area: hero;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            min-width: 200px;
+            background-color: #fff;
+            border: solid 1px rgba(0, 0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .box .title {
+            color: #504f4f;
+            margin-bottom: 20px;
+        }
+
+        .box p {
+            text-align: center;
+            font-weight: bolder;
+            font-size: x-large;
+            color: black;
+        }
+
+        .aside {
+            grid-area: aside;
+        }
+
+        .events {
+            background-color: #fff;
+            border: solid 1px rgba(0, 0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            min-height: 300px;
+        }
+
+        .news {
+            background-color: #fff;
+            border: solid 1px rgba(0, 0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            min-height: 300px;
+        }
+
+        .charts {
+            grid-area: charts;
+        }
+
+        .distribution {
+            grid-area: distribution;
+        }
+
+        .footer {
+            border-top: solid 1px rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            background-color: white;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <div class="logo">
+                Logo here
+            </div>
+            <h1 class="title">Site title</h1>
+        </header>
+        <section class="hero">
+            <section class="box">
+                <h3 class="title">Totol Students</h3>
+                <p>109</p>
+            </section>
+            <section class="box">
+                <h3 class="title">Totol Teachers</h3>
+                <p>50</p>
+            </section>
+            <section class="box">
+                <h3 class="title">Totol Parents</h3>
+                <p>90</p>
+            </section>
+            <section class="box">
+                <h3 class="title">Session</h3>
+                <p>2025/2026</p>
+            </section>
+        </section>
+        <aside class="aside">
+            <div class="events">
+                Events
+            </div>
+            <div class="news">
+                News
+            </div>
+        </aside>
+        <section class="charts card">
+            Chart Section
+        </section>
+        <section class="distribution card">
+            Distritution section
+        </section>
+        <footer class="footer">
+            Footer section
+        </footer>
+    </main>
+</body>
+
+</html>

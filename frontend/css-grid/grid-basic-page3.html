@@ -5,26 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid System example 3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #eee;
+            color: #222;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12pt;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 250px 2fr 1fr;
+            grid-template-rows: 100px 1fr 1fr 100px;
+            gap: 10px;
+            grid-template-areas: "header header header" "aside hero hero" "aside content1 content2" "footer footer content2";
+        }
+
+        .box {
+            padding: 20px;
+        }
+
+        .header {
+            background-color: steelblue;
+            grid-area: header;
+
+        }
+
+        aside {
+            background-color: steelblue;
+            grid-area: aside;
+        }
+
+        .hero {
+            background-color: slateblue;
+            grid-area: hero;
+        }
+
+        .content1 {
+            background-color: slateblue;
+            grid-area: content1;
+        }
+
+        .content2 {
+            background-color: steelblue;
+            grid-area: content2;
+        }
+
+        footer {
+            background-color: steelblue;
+            grid-area: footer;
+        }
+    </style>
 </head>
 
 <body>
     <main class="container">
-        <header class="header">
+        <header class="header box">
             heading section
         </header>
-        <aside class="aside">
+        <aside class="aside box">
             side section
         </aside>
-        <section class="hero">
+        <section class="hero box">
             Hero section
         </section>
-        <section class="content1">
+        <section class="content1 box">
             content 1 section
         </section>
-        <section class="content2">
+        <section class="content2 box">
             content 2 section
         </section>
-        <footer class="footer">
+        <footer class="footer box">
             footer section
         </footer>
     </main>
