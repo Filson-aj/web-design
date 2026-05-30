@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagivation Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            font-size: 12pt;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #eee;
+            color: #000;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            height: auto;
+            min-height: 50px;
+            background-color: #222;
+            color: white;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .brand {
+            display: flex;
+            gap: 20px;
+            padding: 0 10px;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .title {
+            padding-bottom: 10px;
+            font-size: 14pt;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            border: solid 1px #fff;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            background-color: #444;
+            color: white;
+            display: block;
+            padding: 8px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            font-weight: bold;
+            padding: 9px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .navmenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            min-width: 200px;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .navmenu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 2px 4px;
+        }
+
+        .navmenu2 {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 200px;
+            background-color: #444;
+            border-radius: 5px;
+        }
+
+        .dropdown2 {
+            position: relative;
+        }
+
+        .dropdown2:hover .navmenu2 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 2px 4px;
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+            min-height: 400px;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .footer {
+            width: 100%;
+            height: auto;
+            min-height: 50px;
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <div class="brand">
+                <img src="../images/logo.png" alt="Site logo" class="logo">
+                <h2 class="title">
+                    Name of the site goes here
+                </h2>
+            </div>
+            <nav>
+                <ul class="navbar">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#services">Services</a>
+                        <ul class="navmenu">
+                            <li>
+                                <a href="#service1">Service1</a>
+                            </li>
+                            <li>
+                                <a href="#service2">Service2</a>
+                            </li>
+                            <li>
+                                <a href="#service3">Service3</a>
+                            </li>
+                            <li>
+                                <a href="#service4">Service4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown2">
+                        <a href="#about">About Us</a>
+                        <ul class="navmenu2">
+                            <li>
+                                <a href="#programmes">Our Programmes</a>
+                            </li>
+                            <li>
+                                <a href="#classes">Our Classes</a>
+                            </li>
+                            <li>
+                                <a href="#games">Our Games</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <aside class="aside">
+            side section
+        </aside>
+        <section class="content">
+            content section
+        </section>
+        <footer class="footer">
+            this is the footer section
+        </footer>
+    </main>
+</body>
+
+</html>

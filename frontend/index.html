@@ -15,6 +15,117 @@
         body {
             width: 100vw;
             height: 100vh;
+            background-color: #eee;
+            color: #000;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12pt;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 1fr 4fr 1fr;
+            gap: 10px;
+            grid-template-areas:
+                "header header"
+                "aside content"
+                "footer footer";
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #fff;
+            border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .brand {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .brand .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .brand .title {
+            flex: 2;
+        }
+
+        .navbar {
+            background-color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+            padding: 10px 15px;
+        }
+
+        .nav-links a:hover {
+            background-color: #444;
+            border-radius: 4px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            min-width: 180px;
+            list-style: none;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .aside {
+            grid-area: aside;
+            background-color: #fff;
+            border-right: solid 1px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #fff;
+            border: solid 1px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #fff;
+            border-top: solid 1px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
         }
     </style>
 </head>
@@ -22,13 +133,63 @@
 <body>
     <main class="container">
         <header class="header">
-            Heading section
+            <div class="brand">
+                <img src="./images/logo.png" alt="logo" class="logo">
+                <h1 class="title">Professional Portfolio</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#about">About Me</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#software">Software</a>
+                            </li>
+                            <li>
+                                <a href="#graphis">Graphics</a>
+                            </li>
+                            <li>
+                                <a href="#copywriting">Copy Writing</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <aside class="aside">
             Aside section
         </aside>
         <section class="content">
-            Content section
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, corrupti, voluptas labore accusamus
+            aspernatur explicabo molestiae facere illum placeat, quam ipsum adipisci doloremque eligendi? Officiis
+            architecto numquam facere amet similique?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, corrupti, voluptas labore accusamus
+            aspernatur explicabo molestiae facere illum placeat, quam ipsum adipisci doloremque eligendi? Officiis
+            architecto numquam facere amet similique?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, corrupti, voluptas labore accusamus
+            aspernatur explicabo molestiae facere illum placeat, quam ipsum adipisci doloremque eligendi? Officiis
+            architecto numquam facere amet similique?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, corrupti, voluptas labore accusamus
+            aspernatur explicabo molestiae facere illum placeat, quam ipsum adipisci doloremque eligendi? Officiis
+            architecto numquam facere amet similique?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, corrupti, voluptas labore accusamus
+            aspernatur explicabo molestiae facere illum placeat, quam ipsum adipisci doloremque eligendi? Officiis
+            architecto numquam facere amet similique?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, corrupti, voluptas labore accusamus
+            aspernatur explicabo molestiae facere illum placeat, quam ipsum adipisci doloremque eligendi? Officiis
+            architecto numquam facere amet similique?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, corrupti, voluptas labore accusamus
+            aspernatur explicabo molestiae facere illum placeat, quam ipsum adipisci doloremque eligendi? Officiis
+            architecto numquam facere amet similique?
         </section>
         <footer class="footer">
             Footer section
